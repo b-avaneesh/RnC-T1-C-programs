@@ -1,5 +1,5 @@
 # T1C
-Week 1 programs by avaneesh!
+
 '''GIT COMMANDS'''
 '''git init (To initialise the local repository)'''
 '''git status (See current status of the the changes)'''
