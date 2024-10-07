@@ -1,4 +1,3 @@
-// Online C compiler to run C program online
 #include <stdio.h>
 
 int main() {
@@ -18,7 +17,7 @@ int main() {
     if (count1>count2){
     for(i=0;i<count1;i++){
         if (s2[0]==s1[i]){ check=0;
-            for(j=0;j<count2;j++){
+            for(j=0;j<count2-1;j++){
                 if(s1[i+j]!=s2[j]){
                     check=1;
                     break;
@@ -27,36 +26,18 @@ int main() {
 
             }
         }
-    }
-    if (check==0){
+        if (check==0){
         printf("String exists at %d",pos);
+        break;
     }
-    else{
-            printf("Doesnt exist!");
-
-        }
     }
-    else{
-       for(i=0;i<count2;i++){
-        if (s1[0]==s2[i]){ check=0;
-            for(j=0;j<count1;j++){
-                if(s2[i+j]!=s1[j]){
-                    check=1;
-                    break;
-                }
-                else pos=i+1;
-
-            }
-        }
     }
-    if (check==0){
-        printf("String exists at %d",pos);
+    do{
+        s1[i]=s1[i+count2-1];
+        i++;
     }
-    else{
-            printf("Doesnt exist!");
-
-        }
-    }
+    while(s1[i]!='\0');
+    printf("\n%s new string",s1);
 
 
 
