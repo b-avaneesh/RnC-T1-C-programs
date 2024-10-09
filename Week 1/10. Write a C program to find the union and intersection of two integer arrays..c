@@ -40,7 +40,31 @@ int main() {
         }
     }
     printf("The intersection is\n");
+
     for(i=0;i<sum;i++){
+
         printf("%d ",inter[i]);
     }
+    for(i=0;i<sum;i++){
+        for(j=0;j<n2;j++){
+            if(arr2[j]==inter[i]){
+                for(k=j;k<n2;k++){
+                    arr2[k]=arr2[k+1];
+                }
+                n2=n2-1;
+                break;
+            }
+        }
+    }
+    for(i=n1,j=0;i<(n1+n2),j<n2;i++,j++){
+        arr1[i]=arr2[j];
+    }
+    printf("\nUnion is\n");
+    for(i=0;i<n1+n2;i++){
+
+        printf("%d ",arr1[i]);
+    }
+
+
+
 }
