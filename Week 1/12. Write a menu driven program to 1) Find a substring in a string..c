@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 int main() {
     char s1[100],s2[100];int count1=0,count2=0; int i,check,j,pos;
     printf("Enter strings!\n");
